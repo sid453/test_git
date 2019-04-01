@@ -1,0 +1,295 @@
+{
+    "request": {
+        "contactID": "",
+        "contactTypeID": "",
+        "state": {},
+        "tree": {
+            "id": "",
+            "contactTypeID": "",
+            "rootNodeID": "a7fcc776-af84-4c8a-88f9-2af613fec3da",
+            "linkToKB": "NA",
+            "callUScorerAtStart": true,
+            "features": [],
+            "nodes": {
+                "a7fcc776-af84-4c8a-88f9-2af613fec3da":{
+                    "content": "Was the rider charged wait time fees ?",
+                    "choices":[
+                        {
+                            "id": "169db376-011e-4d27-acd7-fc304b6f69c6",
+                            "policyNodeUUID": "169db376-011e-4d27-acd7-fc304b6f69c6", 
+                            "text": "Yes"
+                        },
+                        {
+                            "id": "7e27feb2-cc95-4bb1-8de5-425d6fc7c156",
+                            "policyNodeUUID": "7e27feb2-cc95-4bb1-8de5-425d6fc7c156", 
+                            "text": "No"
+                        }
+                    ],
+                    "id": "a7fcc776-af84-4c8a-88f9-2af613fec3da",
+                    "executorID": "a7fcc776-af84-4c8a-88f9-2af613fec3da",
+                    "type": "DECISION",
+                    "isAutomated": true
+                },
+                "169db376-011e-4d27-acd7-fc304b6f69c6":{
+                    "content": "Has the rider already been refunded the wait time fee?",
+                    "choices":[
+                        {
+                            "id": "2c8350aa-a802-4fd6-a1f9-5802163678dc",
+                            "policyNodeUUID": "2c8350aa-a802-4fd6-a1f9-5802163678dc", 
+                            "text": "Yes"
+                        },
+                        {
+                            "id": "16b53ff7-5091-40c7-9278-23ca2a0fa2a3",
+                            "policyNodeUUID": "16b53ff7-5091-40c7-9278-23ca2a0fa2a3", 
+                            "text": "No"
+                        }
+                    ],
+                    "id": "169db376-011e-4d27-acd7-fc304b6f69c6",
+                    "executorID": "169db376-011e-4d27-acd7-fc304b6f69c6",
+                    "type": "DECISION",
+                    "isAutomated": true
+                },
+                "16b53ff7-5091-40c7-9278-23ca2a0fa2a3":{
+                    "content": "Has the rider raised a similar oncern in the last 30 days and been refunded?",
+                    "choices":[
+                        {
+                            "id": "2c8350aa-a802-4fd6-a1f9-5802163678dc",
+                            "policyNodeUUID": "2c8350aa-a802-4fd6-a1f9-5802163678dc", 
+                            "text": "Yes"
+                        },
+                        {
+                            "id": "16b53ff7-5091-40c7-9278-23ca2a0fa2a3",
+                            "policyNodeUUID": "16b53ff7-5091-40c7-9278-23ca2a0fa2a3", 
+                            "text": "No"
+                        }
+                    ],
+                    "id": "169db376-011e-4d27-acd7-fc304b6f69c6",
+                    "executorID": "169db376-011e-4d27-acd7-fc304b6f69c6",
+                    "type": "DECISION",
+                    "isAutomated": true
+                },
+                "2c8350aa-a802-4fd6-a1f9-5802163678dc":{
+                    "content": "Wait Time Fee Already Refunded.",
+                    "id": "2c8350aa-a802-4fd6-a1f9-5802163678dc",
+                    "calculatorIDs": {
+                        
+                    },
+                    "calculatorIDs": {
+                        "adjustRider": ""
+                        },
+                        "suggestedActions": [
+                        {
+                        "macro": {
+                        "macroID": "2c8350aa-a802-4fd6-a1f9-5802163678dc",
+                        "overrideMacroGeneratorID": "",
+                        "calculatorIDs": {
+                            
+                        }
+                        }
+                        },
+                        {
+                        "changeContactTypeAction": {
+                        "contactTypeID": "",
+                        "path": "Rider > Fare review > Rate and fees confusion > Fees > Wait time fees"
+                        }
+                        }
+                        ],
+                        "showResolution": true,
+                        "type": "TERMINAL"
+                },
+                "2f68d162-4a40-420b-b9a0-fbe6dc492690":{
+                    "content": "Does rider have HFR_platinum_rider_support?",
+                    "choices":[
+                        {
+                            "id": "7d8937d3-18c8-4ab4-9645-8acc903ac413",
+                            "policyNodeUUID": "7d8937d3-18c8-4ab4-9645-8acc903ac413", 
+                            "text": "Yes"
+                        },
+                        {
+                            "id": "16b53ff7-5091-40c7-9278-23ca2a0fa2a3",
+                            "policyNodeUUID": "16b53ff7-5091-40c7-9278-23ca2a0fa2a3",
+                            "text": "No"
+                        }
+                    ],
+                    "id": "2f68d162-4a40-420b-b9a0-fbe6dc492690",
+                    "executorID": "2f68d162-4a40-420b-b9a0-fbe6dc492690",
+                    "type": "DECISION",
+                    "isAutomated": true
+                },
+                "7e27feb2-cc95-4bb1-8de5-425d6fc7c156":{
+                    "content": "No wait time fee applied.",
+                    "id": "7e27feb2-cc95-4bb1-8de5-425d6fc7c156",
+                    "calculatorIDs": {
+                        
+                        },
+                        "suggestedActions": [
+                        {
+                        "macro": {
+                        "macroID": "7e27feb2-cc95-4bb1-8de5-425d6fc7c156",
+                        "overrideMacroGeneratorID": "",
+                        "calculatorIDs": {
+                        
+                        }
+                        }
+                        },
+                        {
+                        "changeContactTypeAction": {
+                        "contactTypeID": "",
+                        "path": "Rider > Fare review > Rate and fees confusion > Fees > Wait time fees"
+                        }
+                        }
+                        ],
+                        "showResolution": true,
+                        "type": "TERMINAL"
+                },
+                "465d6747-d9f4-40a3-a4d8-dd996a370154":{
+                    "content": "Wait Time Fee Refund value is {{.adjustDriver}}",
+                    "id": "465d6747-d9f4-40a3-a4d8-dd996a370154",
+                    "calculatorIDs": {
+                        "adjustRider": "465d6747-d9f4-40a3-a4d8-dd996a370154"
+                        },
+                        "suggestedActions": [
+                        {
+                        "macro": {
+                        "macroID": "465d6747-d9f4-40a3-a4d8-dd996a370154",
+                        "overrideMacroGeneratorID": "",
+                        "calculatorIDs": {
+                            "key1": "465d6747-d9f4-40a3-a4d8-dd996a370154"
+                        }
+                        }
+                        },
+                        {
+                        "changeContactTypeAction": {
+                        "contactTypeID": "",
+                        "path": "Rider > Fare review > Rate and fees confusion > Fees > Wait time fees"
+                        }
+                        }
+                        ],
+                        "showResolution": true,
+                        "type": "TERMINAL"
+                },
+                "c009807c-083e-45bf-bc22-b747a680bb02":{
+                    "content": "Wait Time Fee Refund value is {{.refund_val}}",
+                    "id": "c009807c-083e-45bf-bc22-b747a680bb02",
+                    "calculatorIDs": {
+                        "adjustRider": "c009807c-083e-45bf-bc22-b747a680bb02"
+                        },
+                        "suggestedActions": [
+                        {
+                        "macro": {
+                        "macroID": "c009807c-083e-45bf-bc22-b747a680bb02",
+                        "overrideMacroGeneratorID": "",
+                        "calculatorIDs": {
+                            "key1": "c009807c-083e-45bf-bc22-b747a680bb02"
+                        }
+                        }
+                        },
+                        {
+                        "changeContactTypeAction": {
+                        "contactTypeID": "",
+                        "path": "Rider > Fare review > Rate and fees confusion > Fees > Wait time fees"
+                        }
+                        }
+                        ],
+                        "showResolution": true,
+                        "type": "TERMINAL"
+                }
+            }
+        },
+        "executors": [
+            {
+                "ID": "a7fcc776-af84-4c8a-88f9-2af613fec3da",
+                "type": "SELECTOR",
+                "name": "xxx",
+                "paths" : [
+                    "Root.Contact.Trip"
+                ],
+                "jsSnippet" : "var charges =  superSchema.Contact.Trip.ClientFare.ClientBreakdown.Charges; var chargesItems = charges.length; for(i=0; i<chargesItems; i++){if(charges[i]['ID'] == 'transport.fare.charges.wait_time'){ return true; } }  return false;"
+            },
+            {
+                "ID":   "169db376-011e-4d27-acd7-fc304b6f69c6",
+                "type": "SELECTOR",
+                "name": "xxx",
+                "paths" : [
+                    "Root.Contact.Trip"
+                ],
+                "jsSnippet" : "return superSchema.Contact.Trip.ClientFare.HasClientFareAdjustment;"
+            },
+            {
+                "ID":   "2f68d162-4a40-420b-b9a0-fbe6dc492690",
+                "type": "SELECTOR",
+                "name": "xxx",
+                "paths" : [
+                    "Root.Contact.Trip"
+                ],
+                "jsSnippet" : ""
+            },
+            {
+                "ID": "465d6747-d9f4-40a3-a4d8-dd996a370154",
+                "type": "CALCULATOR",
+                "name":  "calculates wait time refund for platinum riders",
+                "paths": [
+                    "Root.Contact.Trip"
+                ],
+                "jsSnippet" : "var wait_time=0; var charges =  superSchema.Contact.Trip.ClientFare.ClientBreakdown.Charges; var chargesItems = charges.length; for(i=0; i<chargesItems; i++){if(charges[i]['ID'] == 'transport.fare.charges.wait_time'){ wait_time = wait_time + charges[i]['Amount']; }} return Math.min(40, wait_time);"
+            }
+            {
+                "ID": "c009807c-083e-45bf-bc22-b747a680bb02",
+                "type": "CALCULATOR",
+                "name":  "calculates wait time refund for non-platinum riders",
+                "paths": [
+                    "Root.Contact.Trip"
+                ],
+                "jsSnippet" : "var wait_time=0; var charges =  superSchema.Contact.Trip.ClientFare.ClientBreakdown.Charges; var chargesItems = charges.length; for(i=0; i<chargesItems; i++){if(charges[i]['ID'] == 'transport.fare.charges.wait_time'){ wait_time = wait_time + charges[i]['Amount']; }} return Math.min(20, wait_time);"
+            }
+            {
+                "ID": "465d6747-d9f4-40a3-a4d8-dd996a370154",
+                "type": "MACRO-GENERATOR",
+                "name":  "macro for wait time adjustment of 40",
+                "paths": [
+                    "Root.Contact.UserInputAnswers"
+                ],
+                "jsSnippet" : "var userInput = superSchema.Contact.UserInputAnswers; var macroCode = 0; if(userInput['I Was Not Ready']){ macroCode = 10000; } else{ macroCode = 20000; } if(userInput['My Uber Arrived Too Quickly']){ macroCode = macroCode + 1*1000; } else{ macroCode = macroCode + 2*1000; } if(userInput['My Driver Crossed My Location And Did Not Actually Arrive']){ macroCode = macroCode + 1*100; } else{ macroCode = macroCode + 2*100; } if(userInput['I Could Not Connect With My Driver']){ macroCode = macroCode + 1*10; } else{ macroCode = macroCode + 2*10; } if(userInput['I Could Not Find My Driver']){ macroCode = macroCode + 1; } else{ macroCode = macroCode + 2; } macroCode = String(macroCode) + '12'; return 'rfr_' + macroCode;"
+            }
+            {
+                "ID": "f6f254c9-4f57-47ad-8055-16f4c52a1ba6",
+                "type": "MACRO-GENERATOR",
+                "name":  "macro for wait time fee not refunded",
+                "paths": [
+                    "Root.Contact.UserInputAnswers"
+                ],
+                "jsSnippet" : "var userInput = superSchema.Contact.UserInputAnswers; var macroCode = 0; if(userInput['I Was Not Ready']){ macroCode = 10000; } else{ macroCode = 20000; } if(userInput['My Uber Arrived Too Quickly']){ macroCode = macroCode + 1*1000; } else{ macroCode = macroCode + 2*1000; } if(userInput['My Driver Crossed My Location And Did Not Actually Arrive']){ macroCode = macroCode + 1*100; } else{ macroCode = macroCode + 2*100; } if(userInput['I Could Not Connect With My Driver']){ macroCode = macroCode + 1*10; } else{ macroCode = macroCode + 2*10; } if(userInput['I Could Not Find My Driver']){ macroCode = macroCode + 1; } else{ macroCode = macroCode + 2; } macroCode = String(macroCode) + '22'; return 'rfr_' + macroCode;"
+            }
+            {
+                "ID": "c009807c-083e-45bf-bc22-b747a680bb02",
+                "type": "MACRO-GENERATOR",
+                "name":  "macro for wait time adjustment of 20",
+                "paths": [
+                    "Root.Contact.UserInputAnswers"
+                ],
+                "jsSnippet" : "var userInput = superSchema.Contact.UserInputAnswers; var macroCode = 0; if(userInput['I Was Not Ready']){ macroCode = 10000; } else{ macroCode = 20000; } if(userInput['My Uber Arrived Too Quickly']){ macroCode = macroCode + 1*1000; } else{ macroCode = macroCode + 2*1000; } if(userInput['My Driver Crossed My Location And Did Not Actually Arrive']){ macroCode = macroCode + 1*100; } else{ macroCode = macroCode + 2*100; } if(userInput['I Could Not Connect With My Driver']){ macroCode = macroCode + 1*10; } else{ macroCode = macroCode + 2*10; } if(userInput['I Could Not Find My Driver']){ macroCode = macroCode + 1; } else{ macroCode = macroCode + 2; } macroCode = String(macroCode) + '12'; return 'rfr_' + macroCode;"
+            }
+            {
+                "ID": "2c8350aa-a802-4fd6-a1f9-5802163678dc",
+                "type": "MACRO-GENERATOR",
+                "name":  "macro for wait time fee already refunded",
+                "paths": [
+                    "Root.Contact.UserInputAnswers"
+                ],
+                "jsSnippet" : "var userInput = superSchema.Contact.UserInputAnswers; var macroCode = 0; if(userInput['I Was Not Ready']){ macroCode = 10000; } else{ macroCode = 20000; } if(userInput['My Uber Arrived Too Quickly']){ macroCode = macroCode + 1*1000; } else{ macroCode = macroCode + 2*1000; } if(userInput['My Driver Crossed My Location And Did Not Actually Arrive']){ macroCode = macroCode + 1*100; } else{ macroCode = macroCode + 2*100; } if(userInput['I Could Not Connect With My Driver']){ macroCode = macroCode + 1*10; } else{ macroCode = macroCode + 2*10; } if(userInput['I Could Not Find My Driver']){ macroCode = macroCode + 1; } else{ macroCode = macroCode + 2; } macroCode = String(macroCode) + '22'; return 'rfr_' + macroCode;"
+            }
+            {
+                "ID": "7e27feb2-cc95-4bb1-8de5-425d6fc7c156",
+                "type": "MACRO-GENERATOR",
+                "name":  "macro for no wait time fee applied",
+                "paths": [
+                    "Root.Contact.UserInputAnswers"
+                ],
+                "jsSnippet" : "var userInput = superSchema.Contact.UserInputAnswers; var macroCode = 0; if(userInput['I Was Not Ready']){ macroCode = 10000; } else{ macroCode = 20000; } if(userInput['My Uber Arrived Too Quickly']){ macroCode = macroCode + 1*1000; } else{ macroCode = macroCode + 2*1000; } if(userInput['My Driver Crossed My Location And Did Not Actually Arrive']){ macroCode = macroCode + 1*100; } else{ macroCode = macroCode + 2*100; } if(userInput['I Could Not Connect With My Driver']){ macroCode = macroCode + 1*10; } else{ macroCode = macroCode + 2*10; } if(userInput['I Could Not Find My Driver']){ macroCode = macroCode + 1; } else{ macroCode = macroCode + 2; } macroCode = String(macroCode) + '21'; return 'rfr_' + macroCode;"
+            }
+        ],
+        "macros":{
+
+        }
+    }
+}
