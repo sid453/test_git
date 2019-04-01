@@ -232,7 +232,7 @@
                     "Root.Contact.Trip"
                 ],
                 "jsSnippet" : "var wait_time=0; var charges =  superSchema.Contact.Trip.ClientFare.ClientBreakdown.Charges; var chargesItems = charges.length; for(i=0; i<chargesItems; i++){if(charges[i]['ID'] == 'transport.fare.charges.wait_time'){ wait_time = wait_time + charges[i]['Amount']; }} return Math.min(40, wait_time);"
-            }
+            },
             {
                 "ID": "c009807c-083e-45bf-bc22-b747a680bb02",
                 "type": "CALCULATOR",
@@ -241,7 +241,7 @@
                     "Root.Contact.Trip"
                 ],
                 "jsSnippet" : "var wait_time=0; var charges =  superSchema.Contact.Trip.ClientFare.ClientBreakdown.Charges; var chargesItems = charges.length; for(i=0; i<chargesItems; i++){if(charges[i]['ID'] == 'transport.fare.charges.wait_time'){ wait_time = wait_time + charges[i]['Amount']; }} return Math.min(20, wait_time);"
-            }
+            },
             {
                 "ID": "465d6747-d9f4-40a3-a4d8-dd996a370154",
                 "type": "MACRO-GENERATOR",
@@ -249,8 +249,8 @@
                 "paths": [
                     "Root.Contact.UserInputAnswers"
                 ],
-                "jsSnippet" : "var userInput = superSchema.Contact.UserInputAnswers; var macroCode = 0; if(userInput['I Was Not Ready']){ macroCode = 10000; } else{ macroCode = 20000; } if(userInput['My Uber Arrived Too Quickly']){ macroCode = macroCode + 1*1000; } else{ macroCode = macroCode + 2*1000; } if(userInput['My Driver Crossed My Location And Did Not Actually Arrive']){ macroCode = macroCode + 1*100; } else{ macroCode = macroCode + 2*100; } if(userInput['I Could Not Connect With My Driver']){ macroCode = macroCode + 1*10; } else{ macroCode = macroCode + 2*10; } if(userInput['I Could Not Find My Driver']){ macroCode = macroCode + 1; } else{ macroCode = macroCode + 2; } macroCode = String(macroCode) + '12'; return 'wt_' + macroCode;"
-            }
+                "jsSnippet" : "var userInput = superSchema.Contact.UserInputAnswers; var macroCode = 0; if(userInput['I Was Not Ready']){ macroCode = 10000; } else{ macroCode = 20000; } if(userInput['My Uber Arrived Too Quickly']){ macroCode = macroCode + 1*1000; } else{ macroCode = macroCode + 2*1000; } if(userInput['My Driver Crossed My Location And Did Not Actually Arrive']){ macroCode = macroCode + 1*100; } else{ macroCode = macroCode + 2*100; } if(userInput['I Could Not Connect With My Driver']){ macroCode = macroCode + 1*10; } else{ macroCode = macroCode + 2*10; } if(userInput['I Could Not Find My Driver']){ macroCode = macroCode + 1; } else{ macroCode = macroCode + 2; } macroCode = String(macroCode) + '2'; return 'wt_' + macroCode;"
+            },
             {
                 "ID": "f6f254c9-4f57-47ad-8055-16f4c52a1ba6",
                 "type": "MACRO-GENERATOR",
@@ -258,8 +258,8 @@
                 "paths": [
                     "Root.Contact.UserInputAnswers"
                 ],
-                "jsSnippet" : "var userInput = superSchema.Contact.UserInputAnswers; var macroCode = 0; if(userInput['I Was Not Ready']){ macroCode = 10000; } else{ macroCode = 20000; } if(userInput['My Uber Arrived Too Quickly']){ macroCode = macroCode + 1*1000; } else{ macroCode = macroCode + 2*1000; } if(userInput['My Driver Crossed My Location And Did Not Actually Arrive']){ macroCode = macroCode + 1*100; } else{ macroCode = macroCode + 2*100; } if(userInput['I Could Not Connect With My Driver']){ macroCode = macroCode + 1*10; } else{ macroCode = macroCode + 2*10; } if(userInput['I Could Not Find My Driver']){ macroCode = macroCode + 1; } else{ macroCode = macroCode + 2; } macroCode = String(macroCode) + '22'; return 'wt_' + macroCode;"
-            }
+                "jsSnippet" : "var userInput = superSchema.Contact.UserInputAnswers; var macroCode = 0; if(userInput['I Was Not Ready']){ macroCode = 10000; } else{ macroCode = 20000; } if(userInput['My Uber Arrived Too Quickly']){ macroCode = macroCode + 1*1000; } else{ macroCode = macroCode + 2*1000; } if(userInput['My Driver Crossed My Location And Did Not Actually Arrive']){ macroCode = macroCode + 1*100; } else{ macroCode = macroCode + 2*100; } if(userInput['I Could Not Connect With My Driver']){ macroCode = macroCode + 1*10; } else{ macroCode = macroCode + 2*10; } if(userInput['I Could Not Find My Driver']){ macroCode = macroCode + 1; } else{ macroCode = macroCode + 2; } macroCode = String(macroCode) + '3'; return 'wt_' + macroCode;"
+            },
             {
                 "ID": "c009807c-083e-45bf-bc22-b747a680bb02",
                 "type": "MACRO-GENERATOR",
@@ -267,17 +267,8 @@
                 "paths": [
                     "Root.Contact.UserInputAnswers"
                 ],
-                "jsSnippet" : "var userInput = superSchema.Contact.UserInputAnswers; var macroCode = 0; if(userInput['I Was Not Ready']){ macroCode = 10000; } else{ macroCode = 20000; } if(userInput['My Uber Arrived Too Quickly']){ macroCode = macroCode + 1*1000; } else{ macroCode = macroCode + 2*1000; } if(userInput['My Driver Crossed My Location And Did Not Actually Arrive']){ macroCode = macroCode + 1*100; } else{ macroCode = macroCode + 2*100; } if(userInput['I Could Not Connect With My Driver']){ macroCode = macroCode + 1*10; } else{ macroCode = macroCode + 2*10; } if(userInput['I Could Not Find My Driver']){ macroCode = macroCode + 1; } else{ macroCode = macroCode + 2; } macroCode = String(macroCode) + '12'; return 'wt_' + macroCode;"
-            }
-            {
-                "ID": "2c8350aa-a802-4fd6-a1f9-5802163678dc",
-                "type": "MACRO-GENERATOR",
-                "name":  "macro for wait time fee already refunded",
-                "paths": [
-                    "Root.Contact.UserInputAnswers"
-                ],
-                "jsSnippet" : "var userInput = superSchema.Contact.UserInputAnswers; var macroCode = 0; if(userInput['I Was Not Ready']){ macroCode = 10000; } else{ macroCode = 20000; } if(userInput['My Uber Arrived Too Quickly']){ macroCode = macroCode + 1*1000; } else{ macroCode = macroCode + 2*1000; } if(userInput['My Driver Crossed My Location And Did Not Actually Arrive']){ macroCode = macroCode + 1*100; } else{ macroCode = macroCode + 2*100; } if(userInput['I Could Not Connect With My Driver']){ macroCode = macroCode + 1*10; } else{ macroCode = macroCode + 2*10; } if(userInput['I Could Not Find My Driver']){ macroCode = macroCode + 1; } else{ macroCode = macroCode + 2; } macroCode = String(macroCode) + '22'; return 'wt_' + macroCode;"
-            }
+                "jsSnippet" : "var userInput = superSchema.Contact.UserInputAnswers; var macroCode = 0; if(userInput['I Was Not Ready']){ macroCode = 10000; } else{ macroCode = 20000; } if(userInput['My Uber Arrived Too Quickly']){ macroCode = macroCode + 1*1000; } else{ macroCode = macroCode + 2*1000; } if(userInput['My Driver Crossed My Location And Did Not Actually Arrive']){ macroCode = macroCode + 1*100; } else{ macroCode = macroCode + 2*100; } if(userInput['I Could Not Connect With My Driver']){ macroCode = macroCode + 1*10; } else{ macroCode = macroCode + 2*10; } if(userInput['I Could Not Find My Driver']){ macroCode = macroCode + 1; } else{ macroCode = macroCode + 2; } macroCode = String(macroCode) + '2'; return 'wt_' + macroCode;"
+            },
             {
                 "ID": "7e27feb2-cc95-4bb1-8de5-425d6fc7c156",
                 "type": "MACRO-GENERATOR",
@@ -285,7 +276,7 @@
                 "paths": [
                     "Root.Contact.UserInputAnswers"
                 ],
-                "jsSnippet" : "var userInput = superSchema.Contact.UserInputAnswers; var macroCode = 0; if(userInput['I Was Not Ready']){ macroCode = 10000; } else{ macroCode = 20000; } if(userInput['My Uber Arrived Too Quickly']){ macroCode = macroCode + 1*1000; } else{ macroCode = macroCode + 2*1000; } if(userInput['My Driver Crossed My Location And Did Not Actually Arrive']){ macroCode = macroCode + 1*100; } else{ macroCode = macroCode + 2*100; } if(userInput['I Could Not Connect With My Driver']){ macroCode = macroCode + 1*10; } else{ macroCode = macroCode + 2*10; } if(userInput['I Could Not Find My Driver']){ macroCode = macroCode + 1; } else{ macroCode = macroCode + 2; } macroCode = String(macroCode) + '21'; return 'wt_' + macroCode;"
+                "jsSnippet" : "var userInput = superSchema.Contact.UserInputAnswers; var macroCode = 0; if(userInput['I Was Not Ready']){ macroCode = 10000; } else{ macroCode = 20000; } if(userInput['My Uber Arrived Too Quickly']){ macroCode = macroCode + 1*1000; } else{ macroCode = macroCode + 2*1000; } if(userInput['My Driver Crossed My Location And Did Not Actually Arrive']){ macroCode = macroCode + 1*100; } else{ macroCode = macroCode + 2*100; } if(userInput['I Could Not Connect With My Driver']){ macroCode = macroCode + 1*10; } else{ macroCode = macroCode + 2*10; } if(userInput['I Could Not Find My Driver']){ macroCode = macroCode + 1; } else{ macroCode = macroCode + 2; } macroCode = String(macroCode) + '1'; return 'wt_' + macroCode;"
             }
         ],
         "macros":{
