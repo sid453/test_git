@@ -1,7 +1,13 @@
 {
     "request": {
         "contactIDStateMap": {
-      "b0ac9d70-bf86-4174-97fe-0769cbaae457": "ee6bd900-f7c0-42be-9180-fd5bf7c02f3a"
+            "b26c9683-282c-45e8-ba38-c7df6fe4111c" : "f6f254c9-4f57-47ad-8055-16f4c52a1ba6",
+            "3de8123b-9cc6-43fc-a95d-703935b65f6f" : "c009807c-083e-45bf-bc22-b747a680bb02",
+            "b441b173-2979-4e6b-af04-04e7396c67d7" : "2c8350aa-a802-4fd6-a1f9-5802163678dc",
+            "6db5be5b-391e-4dee-a65c-976603a36d59" : "c009807c-083e-45bf-bc22-b747a680bb02",
+            "b645ea7a-6d35-43ca-b082-8fb09c26f1b2" : "c009807c-083e-45bf-bc22-b747a680bb02",
+            "1e562872-eed5-4c73-9e95-0b2edad977c1" : "7e27feb2-cc95-4bb1-8de5-425d6fc7c156",
+            "d179f473-a11a-4698-89c5-379749e30415" : "2c8350aa-a802-4fd6-a1f9-5802163678dc"
     },
         "contactTypeID": "941e4cfb-cc64-4e54-8d10-5b9693793c1c",
         "state": {},
@@ -52,29 +58,52 @@
                     "isAutomated": true
                 },
                 "16b53ff7-5091-40c7-9278-23ca2a0fa2a3":{
-                    "content": "Has the rider raised a similar oncern in the last 30 days and been refunded?",
+                    "content": "Has the rider raised a similar concern in the last 30 days and been refunded?",
                     "choices":[
                         {
-                            "id": "2c8350aa-a802-4fd6-a1f9-5802163678dc",
-                            "policyNodeUUID": "2c8350aa-a802-4fd6-a1f9-5802163678dc", 
+                            "id": "f6f254c9-4f57-47ad-8055-16f4c52a1ba6",
+                            "policyNodeUUID": "f6f254c9-4f57-47ad-8055-16f4c52a1ba6", 
                             "text": "Yes"
                         },
                         {
-                            "id": "16b53ff7-5091-40c7-9278-23ca2a0fa2a3",
-                            "policyNodeUUID": "16b53ff7-5091-40c7-9278-23ca2a0fa2a3", 
+                            "id": "2f68d162-4a40-420b-b9a0-fbe6dc492690",
+                            "policyNodeUUID": "2f68d162-4a40-420b-b9a0-fbe6dc492690", 
                             "text": "No"
                         }
                     ],
-                    "id": "169db376-011e-4d27-acd7-fc304b6f69c6",
-                    "executorID": "169db376-011e-4d27-acd7-fc304b6f69c6",
+                    "id": "16b53ff7-5091-40c7-9278-23ca2a0fa2a3",
+                    "executorID": "16b53ff7-5091-40c7-9278-23ca2a0fa2a3",
                     "type": "DECISION",
                     "isAutomated": true
+                },
+                "f6f254c9-4f57-47ad-8055-16f4c52a1ba6":{
+                    "content": "Wait Time Fee No Refund.",
+                    "id": "f6f254c9-4f57-47ad-8055-16f4c52a1ba6",
+                    "calculators": {
+                        
+                        },
+                        "suggestedActions": [
+                            {
+                                "macro": {
+                                    "macroID": "",
+                                    "overrideMacroGeneratorID": "f6f254c9-4f57-47ad-8055-16f4c52a1ba6"
+                                }
+                            },
+                            {
+                                "changeContactTypeAction": {
+                                        "contactTypeID": "3f1fd820-ad12-4bc4-99fb-bc3a2c47ec03",
+                                        "path": "Rider > Fare review > Rate and fees confusion > Fees > Wait time fees"
+                                    }
+                            }
+                        ],
+                        "showResolution": true,
+                        "type": "TERMINAL"
                 },
                 "2c8350aa-a802-4fd6-a1f9-5802163678dc":{
                     "content": "Wait Time Fee Already Refunded.",
                     "id": "2c8350aa-a802-4fd6-a1f9-5802163678dc",
                     "calculators": {
-                        "adjustRider": "2c8350aa-a802-4fd6-a1f9-5802163678dc"
+                        
                         },
                         "suggestedActions": [
                             {
@@ -96,13 +125,13 @@
                     "content": "Does rider have HFR_platinum_rider_support?",
                     "choices":[
                         {
-                            "id": "7d8937d3-18c8-4ab4-9645-8acc903ac413",
-                            "policyNodeUUID": "7d8937d3-18c8-4ab4-9645-8acc903ac413", 
+                            "id": "465d6747-d9f4-40a3-a4d8-dd996a370154",
+                            "policyNodeUUID": "465d6747-d9f4-40a3-a4d8-dd996a370154", 
                             "text": "Yes"
                         },
                         {
-                            "id": "16b53ff7-5091-40c7-9278-23ca2a0fa2a3",
-                            "policyNodeUUID": "16b53ff7-5091-40c7-9278-23ca2a0fa2a3",
+                            "id": "c009807c-083e-45bf-bc22-b747a680bb02",
+                            "policyNodeUUID": "c009807c-083e-45bf-bc22-b747a680bb02",
                             "text": "No"
                         }
                     ],
@@ -135,10 +164,10 @@
                     "type": "TERMINAL"
                 },
                 "465d6747-d9f4-40a3-a4d8-dd996a370154":{
-                    "content": "Wait Time Fee Refund value is {{.adjustDriver}}",
+                    "content": "Add credit of {{.adjustRider}} to Rider.",
                     "id": "465d6747-d9f4-40a3-a4d8-dd996a370154",
                     "calculators": {
-                        "adjustRider": "465d6747-d9f4-40a3-a4d8-dd996a370154"
+                        "adjustRider": "8ee5f3d3-55b8-4384-af7e-6470cf56f51e"
                         },
                         "suggestedActions": [
                             {
@@ -161,10 +190,10 @@
                         "type": "TERMINAL"
                 },
                 "c009807c-083e-45bf-bc22-b747a680bb02":{
-                    "content": "Wait Time Fee Refund value is {{.refund_val}}",
+                    "content": "Add credit of {{.adjustRider}} to Rider.",
                     "id": "c009807c-083e-45bf-bc22-b747a680bb02",
                     "calculators": {
-                        "adjustRider": "c009807c-083e-45bf-bc22-b747a680bb02"
+                        "adjustRider": "6702d6ac-a3dc-42c5-a9b3-29e31b2a78be"
                         },
                         "suggestedActions": [
                         {
@@ -212,31 +241,42 @@
                 "type": "SELECTOR",
                 "name": "xxx",
                 "paths" : [
-                    "Root.Contact.Trip"
+                    "Root.Contact.Trip",
+                    "Root.Contact.Rider.Tags"
                 ],
-                "jsSnippet" : ""
+                "jsSnippet" : "var platTag = superSchema.Contact.Rider.Tags['HFR_platinum_rider_support']; if(platTag == undefined){ return false;} else {return true;}"
             },
             {
-                "ID": "465d6747-d9f4-40a3-a4d8-dd996a370154",
+                "ID": "16b53ff7-5091-40c7-9278-23ca2a0fa2a3",
+                "type": "SELECTOR",
+                "name": "checks similar concern in the last 30 days",
+                "paths" : [
+                    "Root.Contact.Trip",
+                    "Root.Contact.ContactType30DayHistory"
+                ],
+                "jsSnippet" : "var waitTimeTix = (superSchema.Contact.ContactType30DayHistory['770b7eab-0e4e-471f-81fc-ae35d7cac466'] || 0) + (superSchema.Contact.ContactType30DayHistory['bd9f4beb-d3f4-4026-ad34-61af650312db'] || 0)  + (superSchema.Contact.ContactType30DayHistory['0c52a190-dd16-412a-9f92-3e813e1b6cd0'] || 0) + (superSchema.Contact.ContactType30DayHistory['658e97eb-41a7-4102-ae2b-91278b6e012f'] || 0) + (superSchema.Contact.ContactType30DayHistory['0a5d081d-abea-490a-965e-bfd98799d67e'] || 0) + (superSchema.Contact.ContactType30DayHistory['b70e3573-5212-4e4a-b733-0d223517aac0'] || 0) + (superSchema.Contact.ContactType30DayHistory['2d8f71ad-5fa7-44e5-bd79-d64ac2ff6e89'] || 0) + (superSchema.Contact.ContactType30DayHistory['c1d70ea0-c399-4940-b9c8-ac82733b5cc3'] || 0) + (superSchema.Contact.ContactType30DayHistory['1ee55557-f34d-49a9-9fe1-6e8a4dcee1d1'] || 0) + (superSchema.Contact.ContactType30DayHistory['941e4cfb-cc64-4e54-8d10-5b9693793c1c'] || 0); if(waitTimeTix > 0) {return true;} else {return false;}"
+            },
+            {
+                "ID": "8ee5f3d3-55b8-4384-af7e-6470cf56f51e",
                 "type": "CALCULATOR",
                 "name":  "calculates wait time refund for platinum riders",
                 "paths": [
                     "Root.Contact.Trip"
                 ],
-                "jsSnippet" : "var wait_time=0; var charges =  superSchema.Contact.Trip.ClientFare.ClientBreakdown.Charges; var chargesItems = charges.length; for(i=0; i<chargesItems; i++){if(charges[i]['ID'] == 'transport.fare.charges.wait_time'){ wait_time = wait_time + charges[i]['Amount']; }} return Math.min(40, wait_time);"
+                "jsSnippet" : "var wait_time=0; var charges =  superSchema.Contact.Trip.ClientFare.ClientBreakdown.Charges; var chargesItems = charges.length; for(i=0; i<chargesItems; i++){if(charges[i]['ID'] == 'transport.fare.charges.wait_time'){ wait_time = wait_time + charges[i]['Amount']; }} return (Math.min(40, wait_time));"
             },
             {
-                "ID": "c009807c-083e-45bf-bc22-b747a680bb02",
+                "ID": "6702d6ac-a3dc-42c5-a9b3-29e31b2a78be",
                 "type": "CALCULATOR",
                 "name":  "calculates wait time refund for non-platinum riders",
                 "paths": [
                     "Root.Contact.Trip"
                 ],
-                "jsSnippet" : "var wait_time=0; var charges =  superSchema.Contact.Trip.ClientFare.ClientBreakdown.Charges; var chargesItems = charges.length; for(i=0; i<chargesItems; i++){if(charges[i]['ID'] == 'transport.fare.charges.wait_time'){ wait_time = wait_time + charges[i]['Amount']; }} return Math.min(20, wait_time);"
+                "jsSnippet" : "var wait_time=0; var charges =  superSchema.Contact.Trip.ClientFare.ClientBreakdown.Charges; var chargesItems = charges.length; for(i=0; i<chargesItems; i++){if(charges[i]['ID'] == 'transport.fare.charges.wait_time'){ wait_time = wait_time + charges[i]['Amount']; }} return (Math.min(20, wait_time));"
             },
             {
                 "ID": "465d6747-d9f4-40a3-a4d8-dd996a370154",
-                "type": "MACRO-GENERATOR",
+                "type": "MACROGENERATOR",
                 "name":  "macro for wait time adjustment of 40",
                 "paths": [
                     "Root.Contact.UserInputAnswers"
@@ -245,7 +285,7 @@
             },
             {
                 "ID": "f6f254c9-4f57-47ad-8055-16f4c52a1ba6",
-                "type": "MACRO-GENERATOR",
+                "type": "MACROGENERATOR",
                 "name":  "macro for wait time fee not refunded",
                 "paths": [
                     "Root.Contact.UserInputAnswers"
@@ -254,7 +294,7 @@
             },
             {
                 "ID": "c009807c-083e-45bf-bc22-b747a680bb02",
-                "type": "MACRO-GENERATOR",
+                "type": "MACROGENERATOR",
                 "name":  "macro for wait time adjustment of 20",
                 "paths": [
                     "Root.Contact.UserInputAnswers"
@@ -263,7 +303,7 @@
             },
             {
                 "ID": "7e27feb2-cc95-4bb1-8de5-425d6fc7c156",
-                "type": "MACRO-GENERATOR",
+                "type": "MACROGENERATOR",
                 "name":  "macro for no wait time fee applied",
                 "paths": [
                     "Root.Contact.UserInputAnswers"
